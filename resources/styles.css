@@ -1,0 +1,268 @@
+@font-face {
+    font-family: 'InstrumentSerif-Regular';
+    src: url(/InstrumentSerif-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'InstrumentSerif-Italic';
+    src: url(/InstrumentSerif-Italic.ttf) format('truetype');
+
+}
+
+
+@font-face {
+    font-family: 'DotGothic16';
+    src: url(/DotGothic16-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'LibreBarcode39Extended-Regular';
+    src: url(/LibreBarcode39Extended-Regular.ttf);
+}
+
+@font-face {
+    font-family: AtkinsonHyperlegible;
+    src: url(/AtkinsonHyperlegible-Regular.ttf);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    user-select: none; /* Standard */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* IE/Edge */
+}
+
+
+h1{
+    font-family: 'InstrumentSerif-Regular';
+    font-size: 60px;
+    color: #000000;
+    margin: 60px;
+    margin-top: 50px;
+    margin-bottom: 0;
+    cursor: default;
+
+}
+
+.gpath{
+    color: #000;
+    font-family: "monospace";
+    font-size: 12px;
+    line-height: normal;
+    margin: 60px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    cursor: default;
+
+}
+
+
+#app{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 61%;
+
+
+
+    }
+
+
+
+input{
+    font-family: "DotGothic16";
+    font-size: 16px;
+    padding: 8px;
+    margin: 8px;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 100%;
+    fill: #FFF;
+    border: 1px solid #E17B2E;
+    border-radius: 8px;
+    border-style: solid;
+    filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.25));
+    }
+
+button{
+    font-family: "DotGothic16";
+    font-size: 16px;
+    color: #FFF;
+    padding: 8px;
+    margin: 8px;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 100%;
+    background: linear-gradient(180deg, #AB86EC 0%, #7640D5 100%);
+    border-radius: 8px;
+    border: none;
+    filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.25));
+    cursor: pointer;
+    transition: all 0.3s;
+    
+}
+
+button:hover{
+    transition: all 0.3s;
+    scale: 1.05;}
+
+button:active{
+    transition: all 0.3s;
+    scale: 1.1;
+}
+
+
+
+.generador{
+    margin-left: 60px;
+    margin-right: 60px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+
+    label{
+        font-family: "InstrumentSerif-Italic";
+    }
+}
+
+#concarta{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.carta{
+    cursor: default;
+
+    perspective: 1000px; 
+    width: 221px;
+    height: 104px;
+    background: #F0F0F0;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+#barcode{
+    font-family: 'LibreBarcode39Extended-Regular';
+    background-color: #FFF;
+    font-size: 20px;
+    padding-top: 8px;
+    width: calc(100% - 16px);
+    margin: 8px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+}
+
+#resultado{
+    font-family:AtkinsonHyperlegible;
+    font-size: 52px;
+
+}
+#video{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 39%;
+    background-color: #000000;
+
+
+}
+
+#video:hover{
+    #webcamSelector{
+        display: block;
+    }
+    #github{
+        display: block;
+    }
+}
+
+
+
+video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+select{
+    font-family: "DotGothic16";
+    font-size: 16px;
+    padding: 8px;
+    border: #000;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 1px;
+    filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.25));
+    cursor: pointer;
+    background: #00000077;
+    color: #FFF;
+    backdrop-filter: blur(10px);
+    max-width: 30%;
+
+}
+#webcamSelector{
+    position:fixed;
+    bottom: 10px;
+    left: 10px;
+    display: none;
+
+}
+
+#github{
+    position:fixed;
+    top: 10px;
+    left: 10px;
+    display: none;
+    font-family: 'InstrumentSerif-Regular';
+    font-size: 16px;
+    color: #FFF;
+    z-index: 1000;
+    cursor: pointer;
+
+
+}
+#timezones{
+    width: 100%;
+
+    background-color: #F0F0F0;
+    position: absolute;
+    bottom: 0;
+    overflow-x: scroll;
+    cursor: default;
+
+
+
+
+}
+#timesx{
+    font-family: "DotGothic16";
+    font-size: 12px;
+    padding: 2px;
+    --webkit-line-clamp: 1;
+    white-space: nowrap;   
+    display: block;  
+
+
+}
+
+#logo{
+    position: fixed;
+    top:20px;
+    right: 20px;
+    height: 50px;
+    cursor: pointer;
+
+}
